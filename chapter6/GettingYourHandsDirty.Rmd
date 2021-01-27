@@ -1,0 +1,74 @@
+---
+title: "Data Wrangling: Getting your hands dirty"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting your hands dirty 1
+
+Let's begin with the first part of this exercise!
+
+* Step 1 : Import via a csv
+
+Import the csv file called chapter6data.csv.
+
+```{r}
+library(readr)
+gdp <-
+```
+
+* Step 2 : Import via a gsheet
+
+Import a dataset containing longitude and latitude from this gsheet: https://docs.google.com/spreadsheets/d/1nehKEBKTQx11LZuo5ZJFKTVS0p5y1ysMPSOSX_m8dS8/edit?usp=sharing
+
+```{r}
+library(gsheet)
+locations <-
+```
+
+# Getting your hands dirty 2
+
+Let's begin with the second part of this exercise:
+
+* Step 3 : Delete the column
+
+Delete the column X1 of the gdpdata frame.
+
+```{r}
+
+```
+
+* Step 4 : Filter the data
+
+Filter the gdpdata frame to only keep the following countries: "United States", "Canada", "Japan", "Belgium" and "France".
+
+```{r}
+library(dplyr)
+gdp2 <-
+```
+
+# Getting your hands dirty 3
+
+Let's begin with the third part of this exercise:
+
+* Step 5 : "Lengthens" the data
+
+You need to "lengthens" (modify from wide to long) the dataframe "gdp2" to get three column: "country", "year", "gdp".
+
+```{r}
+library(tidyr)
+gdp3 <-
+```
+
+
+# Getting your hands dirty 4
+
+Now, let's begin with the last part of this exercise:
+
+Step 6 : Merging datasets
+Join the data frame locations to the data frame gdp3.
+
+gdp4 <-
